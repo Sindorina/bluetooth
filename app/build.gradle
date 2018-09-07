@@ -10,6 +10,19 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    //配置keystore签名
+    signingConfigs {
+        debug {
+            storeFile file("D:/workSpaces/vbarEidtTextBAIDUPackageChange/app/src/main/java/key/key.store")
+            storePassword "cl87654321"
+            keyAlias "key23"
+            keyPassword "cl87654321"
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
